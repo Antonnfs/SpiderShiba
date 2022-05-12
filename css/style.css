@@ -881,11 +881,6 @@ body .loaded .preloader {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1024px) {
-  .marquee {
-    bottom: 0;
-  }
-}
 
 .marquee span {
   text-transform: uppercase;
@@ -902,14 +897,6 @@ body .loaded .preloader {
   animation: marquee 2s infinite linear;
 }
 
-@-webkit-keyframes marquee {
-  0% {
-    -webkit-transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-  }
-}
 @keyframes marquee {
   0% {
     transform: translate(0, 0);
@@ -1637,6 +1624,7 @@ body .loaded .preloader {
 .invest__bg {
   background: url("../img/net2.png") left/contain no-repeat;
   position: absolute;
+  z-index: 1;
   left: -92px;
   height: 100%;
   width: 100%;
@@ -1708,6 +1696,8 @@ body .loaded .preloader {
 }
 .main-block-invest__button {
   padding: 25px 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .sub-block-invest {
@@ -1860,6 +1850,187 @@ body .loaded .preloader {
 @media (min-width: 61.99875em) {
   .partners__item_big {
     height: 80px;
+  }
+}
+
+.tokenomics {
+  background: #101D3F;
+  padding: 70px 0 130px 0;
+}
+.tokenomics__main-title {
+  text-align: center;
+}
+@media (min-width: 110.375em) {
+  .tokenomics__main-title {
+    margin-bottom: 4.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 110.375em) {
+  .tokenomics__main-title {
+    margin-bottom: clamp( 3.125rem , 2.9036998617rem  +  1.1065006916vw , 4.125rem );
+  }
+}
+@media (max-width: 20em) {
+  .tokenomics__main-title {
+    margin-bottom: 3.125rem;
+  }
+}
+.tokenomics__content {
+  display: grid;
+  align-items: start;
+  row-gap: 25px;
+}
+@media (min-width: 120em) {
+  .tokenomics__content {
+    column-gap: 9.25rem;
+  }
+}
+@media (min-width: 93.75em) and (max-width: 120em) {
+  .tokenomics__content {
+    column-gap: clamp( 1.875rem , -24.4642857143rem  +  28.0952380952vw , 9.25rem );
+  }
+}
+@media (max-width: 93.75em) {
+  .tokenomics__content {
+    column-gap: 1.875rem;
+  }
+}
+@media (min-width: 92em) {
+  .tokenomics__content {
+    grid-template-columns: 1fr 1.25fr 1fr;
+  }
+}
+@media (min-width: 83.75em) {
+  .tokenomics__content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.tokenomics__column {
+  display: grid;
+  gap: 25px;
+}
+@media (max-width: 83.75em) {
+  .tokenomics__column {
+    order: 2;
+  }
+}
+.tokenomics__item {
+  padding: 28px 25px 20px;
+  background: rgba(0, 0, 0, 0.2666666667);
+  display: grid;
+  gap: 10px;
+  border-radius: 15px;
+}
+.tokenomics__progress {
+  display: block;
+  height: 3px;
+  border-radius: 10px;
+}
+.tokenomics__progress_1 {
+  width: 57px;
+  background: #4E00FF;
+}
+.tokenomics__progress_2 {
+  position: relative;
+  width: 15px;
+  background: #FF850B;
+}
+.tokenomics__progress_2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -150%;
+  height: 3px;
+  width: 18px;
+  border-radius: 10px;
+  background: #663090;
+}
+.tokenomics__progress_3 {
+  width: 90px;
+  background: #1DBEE1;
+}
+.tokenomics__progress_4 {
+  width: 30px;
+  background: #133D81;
+}
+.tokenomics__progress_5 {
+  width: 45px;
+  background: #FF0000;
+}
+.tokenomics__progress_6 {
+  width: 45px;
+  background: #0096F2;
+}
+.tokenomics__title {
+  font-size: 1.6875rem;
+  line-height: 1;
+}
+.tokenomics__text {
+  font-size: 20px;
+  line-height: 1.1;
+  opacity: 0.3;
+}
+.schedule {
+  display: grid;
+  place-self: center;
+}
+@media (max-width: 83.75em) {
+  .schedule {
+    order: 1;
+    margin-bottom: 50px;
+  }
+}
+.schedule__radial {
+  display: grid;
+  place-self: center;
+  width: 552px;
+  height: 552px;
+  background: url("../img/schedule.png") center/contain no-repeat;
+}
+@media (max-width: 92em) {
+  .schedule__radial {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media (max-width: 83.75em) {
+  .schedule__radial {
+    width: 552px;
+    height: 552px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .schedule__radial {
+    width: 330px;
+    height: 330px;
+  }
+}
+.schedule__shiba {
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  background: #101D3F url("../img/shiba.png") center/194px 180px no-repeat;
+  place-self: center;
+}
+@media (max-width: 92em) {
+  .schedule__shiba {
+    width: 320px;
+    height: 320px;
+    background: #101D3F url("../img/shiba.png") center/162px 150px no-repeat;
+  }
+}
+@media (max-width: 83.75em) {
+  .schedule__shiba {
+    width: 450px;
+    height: 450px;
+    background: #101D3F url("../img/shiba.png") center/194px 180px no-repeat;
+  }
+}
+@media (max-width: 47.99875em) {
+  .schedule__shiba {
+    width: 220px;
+    height: 220px;
+    background: #101D3F url("../img/shiba.png") center/116px 107px no-repeat;
   }
 }
 
@@ -2149,187 +2320,6 @@ body .loaded .preloader {
   .join__address {
     padding: 15px;
     border-radius: 30px;
-  }
-}
-
-.tokenomics {
-  background: #101D3F;
-  padding: 70px 0 130px 0;
-}
-.tokenomics__main-title {
-  text-align: center;
-}
-@media (min-width: 110.375em) {
-  .tokenomics__main-title {
-    margin-bottom: 4.125rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 110.375em) {
-  .tokenomics__main-title {
-    margin-bottom: clamp( 3.125rem , 2.9036998617rem  +  1.1065006916vw , 4.125rem );
-  }
-}
-@media (max-width: 20em) {
-  .tokenomics__main-title {
-    margin-bottom: 3.125rem;
-  }
-}
-.tokenomics__content {
-  display: grid;
-  align-items: start;
-  row-gap: 25px;
-}
-@media (min-width: 120em) {
-  .tokenomics__content {
-    column-gap: 9.25rem;
-  }
-}
-@media (min-width: 93.75em) and (max-width: 120em) {
-  .tokenomics__content {
-    column-gap: clamp( 1.875rem , -24.4642857143rem  +  28.0952380952vw , 9.25rem );
-  }
-}
-@media (max-width: 93.75em) {
-  .tokenomics__content {
-    column-gap: 1.875rem;
-  }
-}
-@media (min-width: 92em) {
-  .tokenomics__content {
-    grid-template-columns: 1fr 1.25fr 1fr;
-  }
-}
-@media (min-width: 83.75em) {
-  .tokenomics__content {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-.tokenomics__column {
-  display: grid;
-  gap: 25px;
-}
-@media (max-width: 83.75em) {
-  .tokenomics__column {
-    order: 2;
-  }
-}
-.tokenomics__item {
-  padding: 28px 25px 20px;
-  background: rgba(0, 0, 0, 0.2666666667);
-  display: grid;
-  gap: 10px;
-  border-radius: 15px;
-}
-.tokenomics__progress {
-  display: block;
-  height: 3px;
-  border-radius: 10px;
-}
-.tokenomics__progress_1 {
-  width: 57px;
-  background: #4E00FF;
-}
-.tokenomics__progress_2 {
-  position: relative;
-  width: 15px;
-  background: #FF850B;
-}
-.tokenomics__progress_2:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: -150%;
-  height: 3px;
-  width: 18px;
-  border-radius: 10px;
-  background: #663090;
-}
-.tokenomics__progress_3 {
-  width: 90px;
-  background: #1DBEE1;
-}
-.tokenomics__progress_4 {
-  width: 30px;
-  background: #133D81;
-}
-.tokenomics__progress_5 {
-  width: 45px;
-  background: #FF0000;
-}
-.tokenomics__progress_6 {
-  width: 45px;
-  background: #0096F2;
-}
-.tokenomics__title {
-  font-size: 1.6875rem;
-  line-height: 1;
-}
-.tokenomics__text {
-  font-size: 20px;
-  line-height: 1.1;
-  opacity: 0.3;
-}
-.schedule {
-  display: grid;
-  place-self: center;
-}
-@media (max-width: 83.75em) {
-  .schedule {
-    order: 1;
-    margin-bottom: 50px;
-  }
-}
-.schedule__radial {
-  display: grid;
-  place-self: center;
-  width: 552px;
-  height: 552px;
-  background: url("../img/schedule.png") center/contain no-repeat;
-}
-@media (max-width: 92em) {
-  .schedule__radial {
-    width: 450px;
-    height: 450px;
-  }
-}
-@media (max-width: 83.75em) {
-  .schedule__radial {
-    width: 552px;
-    height: 552px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .schedule__radial {
-    width: 330px;
-    height: 330px;
-  }
-}
-.schedule__shiba {
-  border-radius: 50%;
-  width: 450px;
-  height: 450px;
-  background: #101D3F url("../img/shiba.png") center/194px 180px no-repeat;
-  place-self: center;
-}
-@media (max-width: 92em) {
-  .schedule__shiba {
-    width: 320px;
-    height: 320px;
-    background: #101D3F url("../img/shiba.png") center/162px 150px no-repeat;
-  }
-}
-@media (max-width: 83.75em) {
-  .schedule__shiba {
-    width: 450px;
-    height: 450px;
-    background: #101D3F url("../img/shiba.png") center/194px 180px no-repeat;
-  }
-}
-@media (max-width: 47.99875em) {
-  .schedule__shiba {
-    width: 220px;
-    height: 220px;
-    background: #101D3F url("../img/shiba.png") center/116px 107px no-repeat;
   }
 }
 
