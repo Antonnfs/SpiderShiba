@@ -1729,6 +1729,174 @@ body .loaded .preloader {
   opacity: 0.8;
 }
 
+.roadmap {
+  overflow: hidden;
+  background: #101932;
+  padding: 70px 0 130px;
+}
+.roadmap__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.roadmap__content {
+  display: grid;
+  row-gap: 60px;
+  position: relative;
+}
+@media (min-width: 120em) {
+  .roadmap__content {
+    padding-left: 3.125rem;
+  }
+}
+@media (min-width: 108.5em) and (max-width: 120em) {
+  .roadmap__content {
+    padding-left: clamp( 0rem , -29.4836956522rem  +  27.1739130435vw , 3.125rem );
+  }
+}
+@media (max-width: 108.5em) {
+  .roadmap__content {
+    padding-left: 0rem;
+  }
+}
+@media (min-width: 120em) {
+  .roadmap__content {
+    padding-right: 3.125rem;
+  }
+}
+@media (min-width: 108.5em) and (max-width: 120em) {
+  .roadmap__content {
+    padding-right: clamp( 0rem , -29.4836956522rem  +  27.1739130435vw , 3.125rem );
+  }
+}
+@media (max-width: 108.5em) {
+  .roadmap__content {
+    padding-right: 0rem;
+  }
+}
+.roadmap__item {
+  background: #384D70;
+  border: 1px solid rgba(255, 255, 255, 0.348);
+  border-radius: 30px;
+  padding: 35px 30px;
+  width: calc(100% - 30px);
+  position: relative;
+  display: flex;
+  align-items: start;
+  gap: 35px;
+  border-left: 2px solid #384D70;
+  opacity: 0.4;
+}
+@media (max-width: 75em) {
+  .roadmap__item {
+    margin-left: 30px;
+  }
+  .roadmap__item:before {
+    left: -28px;
+  }
+  .roadmap__item:after {
+    left: -22.5px;
+  }
+}
+@media (min-width: 75em) {
+  .roadmap__item {
+    width: calc(50% - 20px);
+  }
+  .roadmap__item:nth-child(even) {
+    right: calc(-50% - 20px);
+  }
+  .roadmap__item:nth-child(even):before {
+    left: -28px;
+  }
+  .roadmap__item:nth-child(even):after {
+    left: -22.5px;
+  }
+}
+@media (max-width: 37.5em) {
+  .roadmap__item {
+    flex-direction: column;
+  }
+}
+.roadmap__item._watcher-view {
+  opacity: 1;
+}
+.roadmap__item._watcher-view:before, .roadmap__item._watcher-view:after {
+  background: #FF0000;
+}
+.roadmap__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  background: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+@media (min-width: 75em) {
+  .roadmap__item:before {
+    right: -28px;
+  }
+}
+.roadmap__item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 575px;
+  opacity: 1;
+  transform: translate(0px, 120px);
+  background: #384c70;
+}
+@media (min-width: 75em) {
+  .roadmap__item:after {
+    right: -22.5px;
+  }
+}
+.roadmap__number {
+  background: rgba(255, 255, 255, 0.0941176471);
+  border-radius: 30px;
+  flex: 0 0 138px;
+  height: 146px;
+  font-weight: 700;
+  font-size: 65px;
+  display: grid;
+  align-self: start;
+  color: rgba(255, 255, 255, 0.662745098);
+  place-items: center;
+}
+@media (max-width: 93.75em) {
+  .roadmap__number {
+    flex: 0 0 100px;
+    height: 100px;
+    padding: 15px 32px;
+  }
+}
+.roadmap__subtuitle {
+  margin-bottom: 20px;
+}
+.roadmap__paragraph {
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (min-width: 110.375em) {
+  .roadmap__paragraph {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 110.375em) {
+  .roadmap__paragraph {
+    font-size: clamp( 1.125rem , 1.0281811895rem  +  0.4840940526vw , 1.5625rem );
+  }
+}
+@media (max-width: 20em) {
+  .roadmap__paragraph {
+    font-size: 1.125rem;
+  }
+}
+
 .team {
   background: #162344;
   padding: 70px 0;
