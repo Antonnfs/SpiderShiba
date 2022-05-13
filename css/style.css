@@ -309,13 +309,13 @@ body .loaded .preloader {
   grid-template-columns: 250px 1fr;
   align-items: center;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1144px) {
   .header__container {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .header__container {
     height: 60px;
     gap: 0px;
@@ -392,12 +392,12 @@ body .loaded .preloader {
     gap: 1.875rem;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1144.02px) {
   .menu__body {
     grid-template-columns: 1fr auto;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .menu__body {
     position: fixed;
     width: 370px;
@@ -437,7 +437,7 @@ body .loaded .preloader {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1144px) {
   .menu__list {
     flex-direction: column;
     justify-content: start;
@@ -446,7 +446,7 @@ body .loaded .preloader {
     padding: 50px 0 0;
   }
 }
-@media (max-width: 1124px) {
+@media (max-width: 1144px) {
   .menu__list {
     align-items: start;
     row-gap: 25px;
@@ -472,7 +472,7 @@ body .loaded .preloader {
 .icon-menu {
   display: none;
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .icon-menu {
     outline: 13px solid transparent;
     display: block;
@@ -486,7 +486,7 @@ body .loaded .preloader {
     display: none;
   }
 }
-@media (max-width: 1140px) and (max-width: 1140px) {
+@media (max-width: 1144px) and (max-width: 1144px) {
   .icon-menu p {
     display: block;
     position: relative;
@@ -498,7 +498,7 @@ body .loaded .preloader {
     transform: translate(-16px, -16px);
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .icon-menu span, .icon-menu::before, .icon-menu::after {
     content: "";
     transition: all 0.3s ease 0s;
@@ -510,22 +510,22 @@ body .loaded .preloader {
     transform: translate(-6px, 0px);
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .icon-menu::before {
     top: 0px;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .icon-menu::after {
     bottom: 0px;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .icon-menu span {
     top: calc(50% - 1px);
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1144px) {
   .menu-open .icon-menu span {
     transform: translate(-6px, 0px) scale(0);
   }
